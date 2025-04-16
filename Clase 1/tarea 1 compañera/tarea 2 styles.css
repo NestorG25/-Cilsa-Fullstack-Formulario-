@@ -1,0 +1,145 @@
+
+/* Estilos generales para el formulario */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;  /* Fondo claro por defecto */
+    color: #333;  /* Color del texto */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.botones-estilo {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+/* Estilo claro (por defecto) */
+body.claro {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.claro button {
+    background-color: #007bff;
+}
+
+body.claro button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo oscuro */
+body.oscuro {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+body.oscuro .container {
+    background-color: #444; /* Fondo gris oscuro para el contenedor */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra clara */
+}
+
+body.oscuro h1 {
+    color: #fff; /* Título blanco */
+}
+
+body.oscuro label {
+    color: #fff; /* Etiquetas blancas */
+}
+
+body.oscuro input, 
+body.oscuro select {
+    border: 1px solid #fff; /* Bordes blancos */
+    background-color: #555; /* Fondo gris oscuro para los campos */
+    color: #fff; /* Texto blanco dentro de los campos */
+}
+
+body.oscuro button {
+    background-color: #ff0; /* Fondo amarillo brillante para los botones */
+    color: #000; /* Texto negro en los botones */
+}
+
+body.oscuro button:hover {
+    background-color: #ffcc00; /* Amarillo más oscuro en hover */
+}
+
+/* Estilo de alto contraste */
+body.alto-contraste {
+    background-color: #000;
+    color: #fff;
+}
+
+body.alto-contraste .container {
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.alto-contraste h1 {
+    color: #fff;
+}
+
+body.alto-contraste label {
+    color: #fff;
+}
+
+body.alto-contraste input, 
+body.alto-contraste select {
+    border: 1px solid #fff;
+    background-color: #333;
+    color: #fff;
+}
+
+body.alto-contraste button {
+    background-color: #ff0;
+    color: #000;
+}
+
+body.alto-contraste button:hover {
+    background-color: #ffcc00;
+}
+

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos Personales</title>
+    <link rel="stylesheet" href="Formulario4.css">
+    <script>
+        // Función de validación para el formulario
+        function validarFormulario(event) {
+            // Evita que el formulario se envíe si hay errores
+            event.preventDefault();
+
+            // Obtén los campos del formulario
+            const nombre = document.getElementById('nombre');
+            const apellido = document.getElementById('apellido');
+            const email = document.getElementById('email');
+            const fechaNacimiento = document.getElementById('fecha-nacimiento');
+            const pais = document.getElementById('pais');
+
+            let valido = true;
+
+            // Validación para el campo Nombre
+            if (!nombre.value.match(/^[A-Za-zÁÉÍÓÚáéíóú\s]+$/)) {
+                alert('El nombre solo debe contener letras y espacios.');
+                valido = false;
+            }
+
+            // Validación para el campo Apellido
+            if (!apellido.value.match(/^[A-Za-zÁÉÍÓÚáéíóú\s]+$/)) {
+                alert('El apellido solo debe contener letras y espacios.');
+                valido = false;
+            }
+
+            // Validación para el campo Email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email.value.match(emailPattern)) {
+                alert('Por favor ingrese un correo electrónico válido.');
+                valido = false;
+            }
+
+            // Validación para el campo Fecha de Nacimiento
+            if (new Date(fechaNacimiento.value) > new Date()) {
+                alert('La fecha de nacimiento no puede ser una fecha futura.');
+                valido = false;
+            }
+
+            // Validación para el campo País
+            if (pais.value === "") {
+                alert('Por favor seleccione un país.');
+                valido = false;
+            }
+
+            // Si todos los campos son válidos, enviamos el formulario
+            if (valido) {
+                alert('Formulario enviado correctamente');
+                // Aquí puedes agregar lógica para enviar el formulario, si es necesario
+                document.getElementById('Formulario').submit(); // Esto enviaría el formulario
+            }
+        }
+    </script>
+</head>
+
+<body class="claro"> <!-- Estilo claro por defecto -->
+
+    <div class="container">
+        <h1>Formulario de Datos Personales</h1>
+        <form id="Formulario" action="#" method="POST" onsubmit="validarFormulario(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" title="Solo letras y espacios son permitidos.">
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" title="Solo letras y espacios son permitidos.">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required title="Por favor ingrese un email válido.">
+
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required min="1920-01-01" max="2025-12-31">
+
+            <label for="pais">País de residencia:</label>
+            <select name="pais" id="pais">
+                <option value="">Selecciona un país</option>
+                <option value="af">Afganistán</option>
+                <option value="al">Albania</option>
+                <option value="dz">Argelia</option>
+                <option value="ad">Andorra</option>
+                <option value="ao">Angola</option>
+                <option value="ag">Antigua y Barbuda</option>
+                <option value="ar">Argentina</option>
+                <option value="am">Armenia</option>
+                <option value="au">Australia</option>
+                <option value="at">Austria</option>
+                <option value="az">Azerbaiyán</option>
+                <option value="bs">Bahamas</option>
+                <option value="bh">Baréin</option>
+                <option value="bd">Bangladés</option>
+                <option value="bb">Barbados</option>
+                <option value="by">Bielorrusia</option>
+                <option value="be">Bélgica</option>
+                <option value="bz">Belice</option>
+                <option value="bj">Benín</option>
+                <option value="bt">Bután</option>
+                <option value="bo">Bolivia</option>
+                <option value="ba">Bosnia y Herzegovina</option>
+                <option value="bw">Botsuana</option>
+                <option value="br">Brasil</option>
+                <option value="bn">Brunéi</option>
+                <option value="bg">Bulgaria</option>
+                <option value="bf">Burkina Faso</option>
+                <option value="bi">Burundi</option>
+                <option value="cv">Cabo Verde</option>
+                <option value="kh">Camboya</option>
+                <option value="cm">Camerún</option>
+                <option value="ca">Canadá</option>
+                <option value="cf">República Centroafricana</option>
+                <option value="td">Chad</option>
+                <option value="cl">Chile</option>
+                <option value="cn">China</option>
+                <option value="co">Colombia</option>
+                <option value="km">Comoras</option>
+                <option value="cg">Congo</option>
+                <option value="cd">República Democrática del Congo</option>
+                <option value="cr">Costa Rica</option>
+                <option value="ci">Costa de Marfil</option>
+                <option value="hr">Croacia</option>
+                <option value="cu">Cuba</option>
+                <option value="cy">Chipre</option>
+                <option value="cz">Chequia</option>
+                <option value="dk">Dinamarca</option>
+                <option value="dj">Yibuti</option>
+                <option value="dm">Dominica</option>
+                <option value="do">República Dominicana</option>
+                <option value="ec">Ecuador</option>
+                <option value="eg">Egipto</option>
+                <option value="sv">El Salvador</option>
+                <option value="gq">Guinea Ecuatorial</option>
+                <option value="er">Eritrea</option>
+                <option value="ee">Estonia</option>
+                <option value="sz">Esuatini</option>
+                <option value="et">Etiopía</option>
+                <option value="fj">Fiyi</option>
+                <option value="fi">Finlandia</option>
+                <option value="fr">Francia</option>
+                <option value="ga">Gabón</option>
+                <option value="gm">Gambia</option>
+                <option value="ge">Georgia</option>
+                <option value="de">Alemania</option>
+                <option value="gh">Ghana</option>
+                <option value="gr">Grecia</option>
+                <option value="gd">Granada</option>
+                <option value="gt">Guatemala</option>
+                <option value="gn">Guinea</option>
+                <option value="gw">Guinea-Bisáu</option>
+                <option value="gy">Guyana</option>
+                <option value="ht">Haití</option>
+                <option value="hn">Honduras</option>
+                <option value="hu">Hungría</option>
+                <option value="is">Islandia</option>
+                <option value="in">India</option>
+                <option value="id">Indonesia</option>
+                <option value="ir">Irán</option>
+                <option value="iq">Irak</option>
+                <option value="ie">Irlanda</option>
+                <option value="il">Israel</option>
+                <option value="it">Italia</option>
+                <option value="jm">Jamaica</option>
+                <option value="jp">Japón</option>
+                <option value="jo">Jordania</option>
+                <option value="kz">Kazajistán</option>
+                <option value="ke">Kenia</option>
+                <option value="kr">Corea del Sur</option>
+                <option value="kw">Kuwait</option>
+                <option value="kg">Kirguistán</option>
+                <option value="la">Laos</option>
+                <option value="lv">Letonia</option>
+                <option value="lb">Líbano</option>
+                <option value="lr">Liberia</option>
+                <option value="ly">Libia</option>
+                <option value="lt">Lituania</option>
+                <option value="lu">Luxemburgo</option>
+                <option value="mg">Madagascar</option>
+                <option value="mw">Malaui</option>
+                <option value="my">Malasia</option>
+                <option value="mv">Maldivas</option>
+                <option value="ml">Malí</option>
+                <option value="mt">Malta</option>
+                <option value="mx">México</option>
+                <option value="md">Moldavia</option>
+                <option value="mc">Mónaco</option>
+                <option value="mn">Mongolia</option>
+                <option value="me">Montenegro</option>
+                <option value="ma">Marruecos</option>
+                <option value="mz">Mozambique</option>
+                <option value="mm">Birmania</option>
+                <option value="na">Namibia</option>
+                <option value="np">Nepal</option>
+                <option value="nl">Países Bajos</option>
+                <option value="nz">Nueva Zelanda</option>
+                <option value="ni">Nicaragua</option>
+                <option value="ne">Níger</option>
+                <option value="ng">Nigeria</option>
+                <option value="no">Noruega</option>
+                <option value="om">Omán</option>
+                <option value="pk">Pakistán</option>
+                <option value="pa">Panamá</option>
+                <option value="py">Paraguay</option>
+                <option value="pe">Perú</option>
+                <option value="ph">Filipinas</option>
+                <option value="pl">Polonia</option>
+                <option value="pt">Portugal</option>
+                <option value="qa">Catar</option>
+                <option value="ro">Rumania</option>
+                <option value="ru">Rusia</option>
+                <option value="sa">Arabia Saudita</option>
+                <option value="sn">Senegal</option>
+                <option value="rs">Serbia</option>
+                <option value="sg">Singapur</option>
+                <option value="za">Sudáfrica</option>
+                <option value="es">España</option>
+                <option value="se">Suecia</option>
+                <option value="ch">Suiza</option>
+                <option value="th">Tailandia</option>
+                <option value="tr">Turquía</option>
+                <option value="ua">Ucrania</option>
+                <option value="gb">Reino Unido</option>
+                <option value="us">Estados Unidos</option>
+                <option value="uy">Uruguay</option>
+                <option value="ve">Venezuela</option>
+                <option value="vn">Vietnam</option>
+            </select>
+            
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Botones para cambiar el estilo -->
+        <div class="botones-estilo">
+            <button class="btn-cambio" onclick="document.body.className = 'claro'">Estilo Claro</button>
+            <button class="btn-cambio" onclick="document.body.className = 'oscuro'">Estilo Oscuro</button>
+            <button class="btn-cambio" onclick="document.body.className = 'alto-contraste'">Estilo Alto Contraste</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

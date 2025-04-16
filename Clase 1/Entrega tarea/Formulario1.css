@@ -1,0 +1,151 @@
+/*estilo oscuro*/
+
+body.oscuro {
+    background-color: #0A0A0A;
+    color: #FFFF
+}
+
+body.oscuro h1 {
+    color: #92bffa;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+body.oscuro.contenedor {
+    background-color: #323533c7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(10, 70, 222, 0.1);
+    width: 320px;
+    text-align: center;
+    color: #ffff
+}
+
+body.oscuro label {
+    color: #FFFF;
+    text-align: justify;
+}
+
+body.oscuro .formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+body.oscuro input, textarea {
+    width: 100%;
+    height: 15px;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+
+/*estilo claro*/
+body.claro {
+    background-color: #f5f0f0f9;
+    color: #080808
+}
+
+body.claro h1 {
+    color: #232528;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 24px;
+    border: #cb5e05;
+}
+
+body.claro .contenedor {
+    background-color: #f5f0f0f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(34, 222, 10, 0.1);
+    width: 320px;
+    text-align: center;
+    color: #ffffff
+}
+
+body.claro label {
+    color: #10100f;
+    text-align: justify;
+}
+
+body.claro .formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+body.claro input, textarea {
+    width: 100%;
+    height: 15px;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+body.claro button {
+    background-color: #adcb05;
+    color:#ffffff;
+    border: lyne rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 16px;
+    margin: 5px;
+}
+
+body.claro button:hover {
+    background-color: #3f14eddd;
+}
+
+body.claro .boton-out {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+body.claro .boton-out button {
+    background-color: #877d13;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+}
+
+body.claro .boton-out button:hover {
+    background-color: #4b9bbd ;
+}
+
+.error {
+    color: rgb(244, 23, 23);
+    font-size: 0.9em;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.claro {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.button-out button .enviar {
+    background-color: #877d13;
+    color: #ffffff33;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+}

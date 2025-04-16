@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="es">  
+    <head>  
+        <meta charset="utf-8"> 
+          <title>titulo</title> 
+          </head> 
+           <body>  
+                <div class="container">
+                    <h1>Formulario</h1>
+                        <form>
+                            <label for="Nombre">Nombre:</label>
+                                <input type="text" id="Nombre" name="Nombre"></input>
+
+                            <label for="Apellido">Apellido:</label>
+                            <input type="text" id="Apellido" name="Apellido"></input>
+
+                            <label for="Email">Email:</label>
+                                <input type="text" id="Email" name="Email"></input> 
+
+                            <label for="pais"> Pais de residencia </label>
+                            <select name="pais" id="pais">
+                                <option value="argentina">Argentina</option>
+                                <option value="suecia">Suecia</option>
+                                <option value="estados unidos">Estados Unidos</option>
+                                <option value="españa">España</option>
+                                </select>
+
+                            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required min="1900-01-01" max="2025-12-31">
+
+                            <input TYPE="button" NAME="boton" VALUE="Enviar" onClick="document.write('Hola Programador!!!')"></input>
+                            <link rel="stylesheet" href="Formulario1.css">
+                            
+                        <div class="botones-estilo">
+                            <button class="btn-cambio" onclick ="document.body.className = 'claro'">Estilo claro</button>
+                            <button class="btn-cambio" onclick ="document.body.className = 'oscuro'">Estilo oscuro</button>
+                            <button class="btn-cambio" onclick ="document.body.className = 'contraste'">Estilo Contraste</button>
+                        </div>
+
+                    </form>
+                </div>
+            </body>
+</html> 
+
+
